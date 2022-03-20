@@ -1,0 +1,51 @@
+csv 파일 분석
+
+RCP_NM : 메뉴 이름 : BB : 52
+ATT_FILE_NO_MAIN : 메뉴 최종 완성 그림의 url
+MANUAL0X : X번째 레시피
+
+A	0
+B	1
+C	2
+D	3
+E	4
+F	5
+G	6
+H	7
+I	8
+J	9
+K	10
+L	11
+M	12
+N	13
+O	14	
+P	15
+Q	16
+R	17
+S	18
+T	19
+U	20
+V	21
+W	22	
+X	23	
+Y	24
+Z	25
+AA	26
+AB
+AC
+AD
+AE
+AF
+AG
+AH
+AI
+AJ
+AK
+AL
+AM
+AN
+AO
+AP
+AQ
+AR
+AS
