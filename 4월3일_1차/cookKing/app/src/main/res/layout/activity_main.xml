@@ -37,8 +37,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
-
-
                 <FrameLayout
                     android:id="@android:id/tabcontent"
                     android:layout_width="match_parent"
@@ -50,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:background="#3355ff"
+                        android:background="#ED9166"
                         >
 
                         <TextView
@@ -63,7 +61,7 @@
 
 
                         <ImageButton
-                            android:id="@+id/add"
+                            android:id="@+id/addRecipe"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="right"
@@ -71,7 +69,7 @@
 
 
                         <ListView
-                            android:id="@+id/listView"
+                            android:id="@+id/listView1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:choiceMode="singleChoice"
@@ -85,14 +83,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:background="#9933FF"
+                        android:background="#B582E8"
                         >
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cook King                        "
+                            android:textStyle="bold"
+                            android:background="@color/white"
+                            android:textSize="40dp"/>
+
+
+                        <ImageButton
+                            android:id="@+id/addMaterial"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="right"
+                            android:src="@drawable/plus" />
+
+
+                        <ListView
+                            android:id="@+id/listView2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="hello tab2"
-
+                            android:choiceMode="singleChoice"
                             />
 
                     </LinearLayout>

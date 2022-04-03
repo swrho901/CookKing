@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
+import android.media.Image;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ArrayList<SampleData> movieDataList;
-
+    ArrayList<MaterialData> materialDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +48,24 @@ public class MainActivity extends AppCompatActivity {
 
         final ArrayList<SampleData> items =new ArrayList<SampleData>();
         this.InitializeMovieData();
+        ListView listView1 = (ListView)findViewById(R.id.listView1);
+        MyAdapter myAdapter = new MyAdapter(this,movieDataList);
 
-        ListView listView = (ListView)findViewById(R.id.listView);
-        final MyAdapter myAdapter = new MyAdapter(this,movieDataList);
+        listView1.setAdapter(myAdapter);
 
-        listView.setAdapter(myAdapter);
+        //
+        ImageButton btn_add = (ImageButton)findViewById(R.id.addRecipe) ;
+
+        final ArrayList<MaterialData> items2 = new ArrayList<MaterialData>();
+        this.InitializeMovieData();
+        ListView listview2 = (ListView)findViewById(R.id.listView2);
+        //MyAdapter myAdapter2 = new MyAdapter(this,materialDataList);
+
+        //listview2.setAdapter(myAdapter2);
+
+        ImageButton btn_add_material = (ImageButton)findViewById(R.id.addMaterial) ;
 
 
-
-        ImageButton btn_add = (ImageButton)findViewById(R.id.add) ;
         btn_add.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 int count = myAdapter.getCount();
@@ -67,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }) ;
 
         // 여기 에러 일으킬 수 있으니깐 조심해서 사용
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView parent, View v, int position, long id){
                 Toast.makeText(getApplicationContext(),
@@ -77,6 +87,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /*
+        btn_add.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                int count = myAdapter2.getCount();
+                // 아이템 추가.
+                materialDataList.add(new MaterialData(R.drawable.plus, "마늘","2022 7월 7일"));
+                // listview 갱신
+                myAdapter2.notifyDataSetChanged();
+            }
+        }) ; */
+
         try {
 
             TabHost th = (TabHost) findViewById(R.id.host);
@@ -84,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
 
             TabHost.TabSpec spec = th.newTabSpec("Tab One");
             spec.setContent(R.id.tab1);
-            spec.setIndicator("Tab 1");
+            spec.setIndicator("RECIPE");
             th.addTab(spec);
 
             spec = th.newTabSpec("Tab Two");
             spec.setContent(R.id.tab2);
-            spec.setIndicator("Tab 2");
+            spec.setIndicator("MATERIAL");
             th.addTab(spec);
 
             spec = th.newTabSpec("Tab Three");
@@ -126,8 +147,12 @@ public class MainActivity extends AppCompatActivity {
     {
         movieDataList = new ArrayList<SampleData>();
 
-        movieDataList.add(new SampleData(R.drawable.plus, "미션임파서블","15세 이상관람가"));
-        movieDataList.add(new SampleData(R.drawable.plus, "아저씨","19세 이상관람가"));
-        movieDataList.add(new SampleData(R.drawable.plus, "어벤져스","12세 이상관람가"));
+        //movieDataList.add(new SampleData(R.drawable.plus, "미션임파서블","15세 이상관람가"));
+        //movieDataList.add(new SampleData(R.drawable.plus, "아저씨","19세 이상관람가"));
+        //movieDataList.add(new SampleData(R.drawable.plus, "어벤져스","12세 이상관람가"));
+    }
+    public void InitializeMaterialData(){
+        materialDataList = new ArrayList<MaterialData>();
+
     }
 }
