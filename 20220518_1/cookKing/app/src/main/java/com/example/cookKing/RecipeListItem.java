@@ -1,20 +1,8 @@
-package com.example.yummyfridge;
+package com.example.cookKing;
 
-import android.graphics.drawable.Drawable;
-import android.widget.ImageView;
-
-public class ListItem {
-    private Drawable image;
+public class RecipeListItem {
     private String text1;
     private String text2;
-
-    public Drawable getImage() {
-        return image;
-    }
-
-    public void setImage(Drawable image) {
-        this.image = image;
-    }
 
     public String getText1() {
         return text1;
@@ -31,5 +19,6 @@ public class ListItem {
     public void setText2(String text2) {
         this.text2 = text2;
     }
+
 }
 

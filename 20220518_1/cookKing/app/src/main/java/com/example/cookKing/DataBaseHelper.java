@@ -1,10 +1,8 @@
-package com.example.yummyfridge;
+package com.example.cookKing;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import androidx.annotation.Nullable;
 
 import java.io.File;
 import java.io.FileOutputStream;

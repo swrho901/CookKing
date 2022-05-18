@@ -1,4 +1,4 @@
-package com.example.yummyfridge;
+package com.example.cookKing;
 
 import android.content.ContentValues;
 import android.content.Context;
