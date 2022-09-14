@@ -1,3 +1,0 @@
-include ':app'
-rootProject.name = "Yummy Fridge"
-include ':openCVLibrary345'
